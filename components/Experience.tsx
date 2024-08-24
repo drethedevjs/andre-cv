@@ -1,5 +1,6 @@
 import { JobProps } from "@/types/JobProps";
 import Job from "./Job";
+import jobData from "@/data/jobData";
 
 const Experience = () => {
   let job: JobProps = {
@@ -18,7 +19,9 @@ const Experience = () => {
     <div className="container mx-auto px-20 mb-10">
       <h1 className="mb-5">Experience</h1>
       <div className="indent-2 grid gap-4 ml-12">
-        <Job job={job} />
+        {
+          jobData.map(jd => <Job job={jd} />)
+        }
       </div>
     </div>
   );

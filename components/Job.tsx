@@ -7,9 +7,9 @@ const Job: React.FC<{job: JobProps}> = ({ job }) => {
       <h2 className="mb-1">{job.position}, {job.company}</h2>
       <h3 className="mb-1"><i>{job.yearRange}</i></h3>
       <ul className="list-disc pl-16 text-xl">
-        {job.description.map((d: string) => {
+        {job.description.map((d: string, idx: Number) => {
           return (
-              <li>{d}</li>
+              <li key={idx.toString()} >{d}</li>
             )
           })
         }
