@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 h1 {
-  @apply lg:text-6xl sm:text-4xl text-4xl font-bold;
+  @apply lg:text-6xl md:text-6xl sm:text-5xl text-4xl font-bold;
 }
 
 h2 {
-  @apply lg:text-7xl md:text-5xl text-xl font-semibold;
+  @apply lg:text-7xl md:text-5xl sm:text-5xl text-4xl font-semibold;
 }
 
 h3 {
-  @apply lg:text-4xl font-semibold;
+  @apply lg:text-4xl md:text-3xl sm:text-2xl font-semibold;
 }
 
 h4 {
-  @apply lg:text-2xl;
+  @apply lg:text-2xl sm:text-xl;
 }
 
 .btn {

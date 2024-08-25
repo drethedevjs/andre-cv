@@ -1,6 +1,6 @@
 const Portfolio = () => {
   return (
-    <div className="container mx-auto px-20 mb-10">
+    <div className="container mx-auto sm:px-20 px-4 mb-10">
       <h2>Portfolio</h2>
       <div className="relative group w-80 m-5">
         <img
@@ -9,7 +9,9 @@ const Portfolio = () => {
             className="hover:bg-slate-600 rounded-lg"
           />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-lg">
-          <span className="text-xl">Not Another Mug</span>
+          <a href="https://not-another-mug.vercel.app/" target="_blank">
+            <span className="text-xl">Not Another Mug</span>
+          </a>
         </div>
       </div>
     </div>

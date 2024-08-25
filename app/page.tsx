@@ -10,15 +10,22 @@ export default function Home() {
     <>
       <Header />
       <main className="">
-        <div className="flex min-h-screen flex-col items-center p-24">
-          <img src="/dre-headshot.jpeg" alt="Andre's Headshot" className="size-1/5 rounded-full" />
+        <div className="flex min-h-screen flex-col items-center sm:p-24 px-4">
+          <img 
+            src="/dre-headshot.jpeg"
+            alt="Andre's Headshot"
+            className="flex-initial max-w-sm max-h-sm rounded-full"
+            // className="xl:size-1/5 lg:size-2/5 md:size-96 rounded-full"
+          />
 
           <hr className="mt-10 mb-10"></hr>
 
           <p className="mb-10 text-3xl">ANDRE THOMAS</p>
-          <h1 className="text-7xl">Full Stack Engineer</h1>
+          <h1>Full Stack Engineer</h1>
 
-          <p className="mt-8 text-2xl">Building the Future with Full Stack .NET: Passionate Engineer, Proven Results</p>
+          <p className="mt-8 lg:text-2xl md:text-xl text-center">
+            Building the Future with Full Stack .NET: Passionate Engineer, Proven Results
+          </p>
 
           <a
             href="mailto:drethedevjs@gmail.com?subject=Dev%20Opportunity"
