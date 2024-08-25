@@ -1,15 +1,13 @@
 function Header() {
   return ( 
-    <div className="flex border p-5 justify-between">
-      <header className="text-3xl">
-        <h1>Full Stack Engineer</h1>
-      </header>
-      <nav className="space-x-10">
-          <a>Summary</a>
-          <a>Experience</a>
-          <a>Contact</a>
-      </nav>
-      <button className="">Download Resume</button>
+    <div className="flex flex-row-reverse p-5">
+      <a
+        className="btn" 
+        href="https://drive.google.com/file/d/1nwLRBIDH2DdHdd9qMDSnSge1UvkBzoo4/view?usp=sharing"
+        target="_blank"
+      >
+        Download Resume
+      </a>
     </div>
    );
 }
