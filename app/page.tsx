@@ -1,8 +1,10 @@
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Portfolio from "@/components/Portfolio";
 import Skills from "@/components/Skills";
+import SocialLinks from "@/components/SocialLinks";
 import skillsData from "@/data/skillsData";
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
 
           <hr className="mt-10 mb-10"></hr>
 
+          <SocialLinks opacity={100} />
+
           <p className="mb-10 text-3xl">ANDRE THOMAS</p>
           <h1>Full Stack Engineer</h1>
 
@@ -33,12 +37,14 @@ export default function Home() {
           >
             Contact Me
           </a>
+
         </div>
 
         <Experience />
         <Skills skills={skillsData} />
         <Education />
         <Portfolio />
+        <Footer opacity={30} />
       </main>
     </>
   );
