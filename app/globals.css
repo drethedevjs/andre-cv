@@ -37,3 +37,11 @@ th, td {
 .header-row {
   @apply font-semibold;
 }
+
+.skill {
+  @apply p-2 text-xl border border-slate-900 text-slate-900 rounded-md;
+}
+
+.social {
+  @apply m-5 size-7;
+}

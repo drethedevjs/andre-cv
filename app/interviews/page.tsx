@@ -9,11 +9,11 @@ const page = () => {
         <table className="table-fixed m-5 border-collapse border-2 border-slate-400 w-full">
         <thead>
           <tr>
-            <th className="">Company</th>
-            <th className="">1st Interview</th>
-            <th className="">2nd Interview</th>
-            <th className="">3rd Interview</th>
-            <th className="">Final</th>
+            <th>Company</th>
+            <th>1st Interview</th>
+            <th>2nd Interview</th>
+            <th>3rd Interview</th>
+            <th>Final</th>
           </tr>
         </thead>
         <tbody>
@@ -26,31 +26,31 @@ const page = () => {
           </tr>
           <tr>
             <td className="header-row">Walker Healthforce</td>
-            <td className="bg-yellow-100">8/26</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
+            <td className="bg-yellow-100">8/27</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
           </tr>
           <tr>
             <td className="header-row">Tyler Technology</td>
-            <td className="bg-green-200">Complete</td>
-            <td className="bg-yellow-100">8/26</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
+            <td className="bg-green-200">Technical</td>
+            <td className="bg-yellow-100">8/27</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
           </tr>
           <tr>
             <td className="header-row">Augusta National</td>
             <td className="bg-green-200">Complete</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
           </tr>
           <tr>
             <td className="header-row">Booz Allen Hamilton</td>
-            <td className="bg-yellow-100">8/26</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
-            <td className="">Not Scheduled</td>
+            <td className="bg-yellow-100">8/27</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
+            <td>Not Scheduled</td>
           </tr>
         </tbody>
         </table>

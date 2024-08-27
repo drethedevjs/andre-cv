@@ -6,6 +6,7 @@ import Portfolio from "@/components/Portfolio";
 import Skills from "@/components/Skills";
 import SocialLinks from "@/components/SocialLinks";
 import skillsData from "@/data/skillsData";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -13,10 +14,12 @@ export default function Home() {
       <Header />
       <main className="">
         <div className="flex min-h-screen flex-col items-center sm:p-24 px-4">
-          <img 
+          <Image
             src="/dre-headshot.jpeg"
-            alt="Andre's Headshot"
+            alt="Andre's head shot"
             className="flex-initial max-w-sm max-h-sm rounded-full"
+            width={400}
+            height={400}
             // className="xl:size-1/5 lg:size-2/5 md:size-96 rounded-full"
           />
 
@@ -37,7 +40,6 @@ export default function Home() {
           >
             Contact Me
           </a>
-
         </div>
 
         <Experience />

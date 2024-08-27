@@ -12,7 +12,7 @@ const Skills: React.FC<{skills: Array<SkillsProps>}> = ({skills}) => {
             return (
               <span 
               key={idx.toString()} 
-              className="p-2 text-xl bg-slate-600 text-cyan-100 rounded-md"
+              className="skill"
             >
               {s.name}
             </span>
@@ -28,7 +28,7 @@ const Skills: React.FC<{skills: Array<SkillsProps>}> = ({skills}) => {
           return (
             <span 
               key={idx.toString()} 
-              className="p-2 text-xl bg-slate-600 text-cyan-100 rounded-md"
+              className="skill"
             >
               {s.name}
             </span>
