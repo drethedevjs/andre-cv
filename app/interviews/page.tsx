@@ -26,28 +26,28 @@ const page = () => {
           </tr>
           <tr>
             <td className="header-row">Walker Healthforce</td>
-            <td className="bg-yellow-100">8/27</td>
-            <td>Not Scheduled</td>
+            <td className="bg-green-200">Complete</td>
+            <td className="bg-yellow-100">8/28</td>
             <td>Not Scheduled</td>
             <td>Not Scheduled</td>
           </tr>
           <tr>
             <td className="header-row">Tyler Technology</td>
+            <td className="bg-green-200">Complete</td>
             <td className="bg-green-200">Technical</td>
-            <td className="bg-yellow-100">8/27</td>
             <td>Not Scheduled</td>
             <td>Not Scheduled</td>
           </tr>
           <tr>
-            <td className="header-row">Augusta National</td>
+            <td className="header-row">Booz Allen Hamilton</td>
             <td className="bg-green-200">Complete</td>
             <td>Not Scheduled</td>
             <td>Not Scheduled</td>
             <td>Not Scheduled</td>
           </tr>
           <tr>
-            <td className="header-row">Booz Allen Hamilton</td>
-            <td className="bg-yellow-100">8/27</td>
+            <td className="header-row">Kavaliro</td>
+            <td className="bg-green-200">Complete</td>
             <td>Not Scheduled</td>
             <td>Not Scheduled</td>
             <td>Not Scheduled</td>

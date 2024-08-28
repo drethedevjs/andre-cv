@@ -17,10 +17,10 @@ export default function Home() {
           <Image
             src="/dre-headshot.jpeg"
             alt="Andre's head shot"
-            className="flex-initial max-w-sm max-h-sm rounded-full"
             width={400}
             height={400}
-            // className="xl:size-1/5 lg:size-2/5 md:size-96 rounded-full"
+            // className="flex-initial max-w-sm max-h-sm rounded-full"
+            className="xl:size-1/5 lg:size-2/5 md:size-96 rounded-full"
           />
 
           <hr className="mt-10 mb-10"></hr>
