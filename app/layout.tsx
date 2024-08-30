@@ -6,8 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Full Stack Engineer | Andre Thomas",
-  description: "The CV for Full Stack Engineer, Andre Thomas.",
-  icons: { icon: "../public/man-favicon.ico" }
+  description: "The CV for Full Stack Engineer, Andre Thomas."
 };
 
 export default function RootLayout({

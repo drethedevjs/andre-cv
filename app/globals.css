@@ -45,3 +45,11 @@ th, td {
 .social {
   @apply m-5 size-7;
 }
+
+.scheduled {
+  @apply bg-yellow-100;
+}
+
+.completed {
+  @apply bg-green-200;
+}
