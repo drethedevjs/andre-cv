@@ -10,7 +10,6 @@ let jobData: Array<JobProps> = [{
     "Using SQL Server to create stored procedures for new and existing projects.",
     "Using Azure DevOps to deploy changes to dev and production.",
     "Used ElasticSearch to query data and add new data to already built data pulls.",
-    "Navigated Azure Portal for needed information.",
     "Streamlined publications management process, reducing it from three screens to a single interface. Internal users can now create and manage publications much more efficiently saving time and money.",
     "Migrated business application features from legacy systems to our new web application. This migration allowed users to conduct research efficiently and to have a more cohesive user experience."
   ],

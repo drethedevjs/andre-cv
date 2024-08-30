@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="">
+      <main className="mt-10">
         <div className="flex min-h-screen flex-col items-center sm:p-24 px-4">
           <Image
             src="/dre-headshot.jpeg"
@@ -20,10 +20,10 @@ export default function Home() {
             width={400}
             height={400}
             // className="flex-initial max-w-sm max-h-sm rounded-full"
-            className="xl:size-1/5 lg:size-2/5 md:size-96 rounded-full"
+            className="xl:size-1/5 lg:size-2/5 md:size-96 size-60 rounded-full"
           />
 
-          <hr className="mt-10 mb-10"></hr>
+          <hr className="mb-10"></hr>
 
           <SocialLinks opacity={100} />
 

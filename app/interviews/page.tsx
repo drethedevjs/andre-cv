@@ -25,7 +25,7 @@ const page = () => {
               <td className="scheduled">Awaiting Offer</td>
             </tr>
             <tr>
-              <td className="header-row">Walker Healthforce</td>
+              <td className="header-row">Humana Military</td>
               <td className="completed">Complete</td>
               <td className="completed">Technical</td>
               <td>Not Scheduled</td>
