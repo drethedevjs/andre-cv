@@ -10,7 +10,7 @@ const Job: React.FC<{job: JobProps}> = ({ job }) => {
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <h3 className="sm:mb-1">{job.position}, {job.company}</h3>
-          <span className="bg-slate-300 p-1 ml-3 text-sm rounded-lg w-20 h-7 sm:visible invisible">Remote</span>
+          <span className="remote">Remote</span>
         </div>
         
         <Image 
@@ -18,7 +18,7 @@ const Job: React.FC<{job: JobProps}> = ({ job }) => {
           alt="Copy icon"
           width={35}
           height={35}
-          className="ml-auto p-1 hover:border hover:rounded-lg active:bg-slate-200 sm:visible invisible"
+          className="ml-auto p-1 hover:border hover:border-slate-600 hover:rounded-lg active:bg-slate-200 sm:visible invisible"
           onClick={() => handleCopy(job.description)} />
       </div>
       <h4 className="mb-1"><i>{job.yearRange}</i></h4>
