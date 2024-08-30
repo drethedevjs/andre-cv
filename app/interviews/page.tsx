@@ -6,7 +6,8 @@ const page = () => {
       <div className="container px-3 pt-8">
         <h1 className="mb-5">Interviewing</h1>
         <a href="/" className="btn">Back</a>
-        <table className="table-fixed m-5 border-collapse border-2 border-slate-400 w-full">
+        <div className="overflow-x-auto">
+        <table className="table-fixed m-5 border-collapse border-2 border-slate-400 sm:w-full">
           <thead>
             <tr>
               <th>Company</th>
@@ -68,6 +69,8 @@ const page = () => {
             </tr>
           </tbody>
         </table>
+
+        </div>
       </div>
       <Footer opacity={30} />
     </>
