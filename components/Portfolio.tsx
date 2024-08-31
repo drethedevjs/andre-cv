@@ -1,6 +1,7 @@
 import Image from "next/image";
 import portfolioData from "@/data/portfolioData";
 import Website from "./Website";
+import { WebsiteProps } from "@/interfaces/WebsiteProps";
 
 const Portfolio = () => {
   return (
@@ -8,8 +9,8 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
       <div className="grid grid-cols-3 gap-10">
           {
-            portfolioData.map(pd => {
-              return <Website website={pd} />
+            portfolioData.map((pd: WebsiteProps, idx: number) => {
+              return <Website key={idx} website={pd} />
             })
           }
       </div>

@@ -20,10 +20,9 @@ const Website: React.FC<{website: WebsiteProps}> = ({website}) => {
       </div>
       <div className="flex flex-wrap gap-1 ml-5 w-96">
         {
-          website.technologies.map(t => {
+          website.technologies.map((t: string, idx: number) => {
             return (
-              <span className="tech-used">{t}</span>
-
+              <span key={idx} className="tech-used">{t}</span>
             )
           })
         }

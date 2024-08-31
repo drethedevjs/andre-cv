@@ -1,4 +1,6 @@
-const portfolioData = [{
+import { WebsiteProps } from "@/interfaces/WebsiteProps";
+
+const portfolioData: Array<WebsiteProps> = [{
   imageSrc: "/nam-home-page.png",
   alt: "Screenshot of Not Another Mug Website",
   classes: "hover:bg-slate-600 rounded-lg",
