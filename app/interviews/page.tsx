@@ -54,13 +54,6 @@ const page = () => {
                 <td>Not Scheduled</td>
               </tr>
               <tr>
-                <td className="header-row">Tyler Technology</td>
-                <td className="completed">Complete</td>
-                <td className="completed">Complete</td>
-                <td>Not Scheduled</td>
-                <td>Not Scheduled</td>
-              </tr>
-              <tr>
                 <td className="header-row">Kavaliro</td>
                 <td className="completed">Complete</td>
                 <td>Not Scheduled</td>

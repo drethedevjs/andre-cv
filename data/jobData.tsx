@@ -47,6 +47,16 @@ let jobData: Array<JobProps> = [{
     "Worked with CTO to build a program for employees to track their performance. This facilitated friendly competition among the employee which boosted morale."
   ],
   isRemote: true
+},
+{
+  company: "Fayette County Public Schools",
+  position: "Software Engineer I",
+  yearRange: "Sept 2018 - Aug 2019",
+  description: [
+    "Developed two .NET Core web applications: one allowing users to log incoming phone calls for administrative assistants, while the other streamlined the management of incoming requests for the dev team.",
+    "Maintained two online forms utilizing a low-code framework and customized logic using C#."
+  ],
+  isRemote: false
 }];
 
 export default jobData;
