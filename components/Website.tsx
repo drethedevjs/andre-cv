@@ -18,7 +18,7 @@ const Website: React.FC<{website: WebsiteProps}> = ({website}) => {
         </div>
         </a>
       </div>
-      <div className="flex flex-wrap gap-1 ml-5 w-96">
+      <div className="flex flex-wrap gap-1 ml-5 sm:w-96">
         {
           website.technologies.map((t: string, idx: number) => {
             return (
