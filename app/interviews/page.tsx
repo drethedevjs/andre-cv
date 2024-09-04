@@ -28,9 +28,9 @@ const page = () => {
               <tr>
                 <td className="header-row">Humana Military</td>
                 <td className="completed">Complete</td>
-                <td className="completed">Technical</td>
-                <td>Not Scheduled</td>
-                <td>Not Scheduled</td>
+                <td className="completed">Complete</td>
+                <td className="completed">N/A</td>
+                <td className="offer">Offer Extended</td>
               </tr>
               <tr>
                 <td className="header-row">Booz Allen Hamilton</td>
@@ -48,7 +48,14 @@ const page = () => {
               </tr>
               <tr>
                 <td className="header-row">The Rawlings Group</td>
-                <td className="scheduled">9/3</td>
+                <td className="completed">Completed</td>
+                <td className="scheduled" >Technical</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+              </tr>
+              <tr>
+                <td className="header-row">GE Aerospace</td>
+                <td className="completed">Complete</td>
                 <td>Not Scheduled</td>
                 <td>Not Scheduled</td>
                 <td>Not Scheduled</td>
