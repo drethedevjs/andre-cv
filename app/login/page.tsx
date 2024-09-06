@@ -1,9 +1,9 @@
 'use client'
 import { FormEvent, useRef } from "react";
 
-const page = () => {
+const Login = () => {
   window.location.href = "/";
-  
+
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
 
@@ -28,4 +28,4 @@ const page = () => {
   );
 }
  
-export default page;
+export default Login;
