@@ -6,15 +6,15 @@ const Job: React.FC<{job: JobProps}> = ({ job }) => {
   const handleCopy = (description: Array<string>) => navigator.clipboard.writeText(description.join("\n"));
 
   return (
-    <div className="border-8 sm:p-6 p-3 rounded-md">
+    <div className="border-4 border-slate-400 shadow-md sm:p-6 p-3 rounded-md">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <h3 className="sm:mb-1">{job.position}, {job.company}</h3>
           <span className="remote">Remote</span>
         </div>
-        
-        <Image 
-          src="\copy-icon.svg" 
+
+        <Image
+          src="\copy-icon.svg"
           alt="Copy icon"
           width={35}
           height={35}
