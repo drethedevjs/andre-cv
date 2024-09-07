@@ -1,3 +1,4 @@
+'use client'
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
@@ -7,8 +8,18 @@ import Skills from "@/components/Skills";
 import SocialLinks from "@/components/SocialLinks";
 import skillsData from "@/data/skillsData";
 import Image from "next/image";
+import { useEffect } from "react";
+import { getSupabaseBrowserClient } from "@/app/supabase-utils/browserClient";
 
 export default function Home() {
+  useEffect(() => {
+    const supabase = getSupabaseBrowserClient();
+    supabase.storage.listBuckets().then((value) => {
+      console.log("Bucket List", value)
+      return value;
+    }
+  )}, []);
+
   return (
     <>
       <Header />

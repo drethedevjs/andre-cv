@@ -67,7 +67,7 @@ th, td {
 }
 
 .remote {
-  @apply bg-slate-300 p-1 ml-3 text-sm rounded-lg w-20 h-7 sm:visible invisible;
+  @apply bg-slate-600 p-1 ml-3 text-sm text-white rounded-lg w-20 h-7 sm:visible invisible;
 }
 
 .offer {

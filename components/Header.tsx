@@ -4,8 +4,8 @@ function Header() {
       <div>
         <a
           title="Feature coming soon!"
-          className="disable ml-3"
-          // href="/login"
+          className="btn-invert ml-3"
+          href="/login"
         >
           Login
         </a>
