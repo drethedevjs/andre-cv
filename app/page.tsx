@@ -1,8 +1,6 @@
 'use client'
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Portfolio from "@/components/Portfolio";
 import Skills from "@/components/Skills";
 import SocialLinks from "@/components/SocialLinks";
@@ -22,15 +20,14 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <main className="mt-10">
+      <div className="mt-10">
         <div className="flex min-h-screen flex-col items-center sm:p-24 px-4">
           <Image
             src="/dre-headshot.jpeg"
             alt="Andre's head shot"
             width={400}
             height={400}
-            // className="flex-initial max-w-sm max-h-sm rounded-full"
+            priority={true}
             className="xl:size-1/5 lg:size-2/5 md:size-96 size-60 rounded-full"
           />
 
@@ -42,7 +39,7 @@ export default function Home() {
           <h1>Full Stack Engineer</h1>
 
           <p className="mt-8 lg:text-2xl md:text-xl text-center">
-            Building the Future with Full Stack .NET: Passionate Engineer, Proven Results
+            Building the Future with .NET: Passionate Engineer, Proven Results
           </p>
 
           <a
@@ -57,8 +54,7 @@ export default function Home() {
         <Skills skills={skillsData} />
         <Education />
         <Portfolio />
-        <Footer opacity={30} />
-      </main>
+      </div>
     </>
   );
 }

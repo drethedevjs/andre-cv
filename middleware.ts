@@ -2,14 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseReqResClient } from "./app/supabase-utils/reqResClient";
 
 export async function middleware(req: NextRequest) {
-  console.log("---- MIDDLEWARE -----");
   const { supabase, response } = getSupabaseReqResClient({ request: req });
   const sessionUser = await supabase.auth.getUser();
   const requestedPath = req.nextUrl.pathname;
-
-  console.log("requestedPath", requestedPath);
-  console.log("sessionUser", sessionUser.data.user?.email);
-  console.error("session Error", sessionUser.error);
 
   // Allow access to `/login` path without being logged in
   if (requestedPath === "/login"){

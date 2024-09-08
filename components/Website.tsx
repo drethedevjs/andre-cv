@@ -14,7 +14,7 @@ const Website: React.FC<{website: WebsiteProps}> = ({website}) => {
           />
         <a href={website.link} target={website.target}>
         <div className="overlay">
-            <span className="text-xl">Not Another Mug</span>
+            <span className="text-xl">{website.name}</span>
         </div>
         </a>
       </div>

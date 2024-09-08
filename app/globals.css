@@ -85,3 +85,7 @@ label {
 .disable {
   @apply opacity-25 border-2 border-slate-600 bg-white rounded-lg p-4 text-slate-600 cursor-not-allowed;
 }
+
+.header-link {
+  @apply ml-3 border-b-4 border-white hover:border-slate-600 p-1 transition-all;
+}

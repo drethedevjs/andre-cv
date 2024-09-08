@@ -36,15 +36,15 @@ const Login = () => {
   }
 
   return loggedIn ?
-    <main className="container mx-auto mt-10">
+    <>
       <h1>You</h1>
       <h1>Logged</h1>
       <h1>In!</h1>
       <p>You will be navigated to the home page shortly.</p>
       <small>If not, something went wrong 😬</small>
-    </main>
+    </>
   :
-    <main className="container mx-auto mt-10">
+    <>
       <h1 className="mb-10 text-center">Login</h1>
       <form className="flex flex-col w-1/2 mx-auto" onSubmit={handleLogin}>
         <label>Email:</label>
@@ -55,7 +55,7 @@ const Login = () => {
 
         <input className="btn-invert" type="submit" value="Login" required />
       </form>
-    </main>
+    </>
 }
  
 export default Login;
