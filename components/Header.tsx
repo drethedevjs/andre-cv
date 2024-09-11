@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <header className="flex flex-row-reverse p-5 m-5">
         <Link
-          className="header-link"
+          className="header-link font-semibold"
           href="https://drive.google.com/file/d/1nwLRBIDH2DdHdd9qMDSnSge1UvkBzoo4/view?usp=sharing"
           target="_blank"
         >
@@ -38,6 +38,7 @@ export default function Header() {
           className="header-link"
           href="/logout"
           prefetch={false}
+          hidden={true}
           onClick={(e) => {
             e.preventDefault();
             supabase.auth.signOut();

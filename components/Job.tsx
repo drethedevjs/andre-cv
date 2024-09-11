@@ -18,7 +18,7 @@ const Job: React.FC<{job: JobProps}> = ({ job }) => {
           alt="Copy icon"
           width={35}
           height={35}
-          className="ml-auto p-1 hover:border hover:border-slate-600 hover:rounded-lg active:bg-slate-200 sm:visible invisible"
+          className="ml-auto p-1 hover:border hover:border-primary hover:rounded-lg active:bg-slate-200 sm:visible invisible"
           onClick={() => handleCopy(job.description)} />
       </div>
       <h4 className="mb-1"><i>{job.yearRange}</i></h4>

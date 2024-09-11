@@ -45,6 +45,27 @@ const page = () => {
                 <td className="scheduled" >Awaiting Offer</td>
               </tr>
               <tr>
+                <td className="header-row">Xenith Solutions</td>
+                <td className="completed">Complete</td>
+                <td className="scheduled">9/13</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+              </tr>
+              <tr>
+                <td className="header-row">OptumServe Health Services</td>
+                <td className="completed">Complete</td>
+                <td className="scheduled">9/11</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+              </tr>
+              <tr>
+                <td className="header-row">Public Consulting Group (Kavaliro)</td>
+                <td className="completed">Complete</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+              </tr>
+              <tr>
                 <td className="header-row">GE Aerospace</td>
                 <td className="completed">Complete</td>
                 <td>Not Scheduled</td>

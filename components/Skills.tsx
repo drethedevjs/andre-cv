@@ -20,7 +20,7 @@ const Skills: React.FC<{skills: Array<SkillsProps>}> = ({skills}) => {
         })}
       </div>
 
-      <h3 className="mt-5 mb-5">Novice</h3>
+      <h3 className="mt-5 mb-5">Actively Learning</h3>
       <div className="flex flex-wrap gap-1">
         {skills
           .filter(s => !s.proficient)

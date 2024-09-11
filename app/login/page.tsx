@@ -53,7 +53,7 @@ const Login = () => {
         <label>Password:</label>
         <input type="password" ref={passwordInputRef} required />
 
-        <input className="btn-invert" type="submit" value="Login" required />
+        <input className="btn" type="submit" value="Login" required />
       </form>
     </>
 }
