@@ -66,6 +66,13 @@ const page = () => {
                 <td>Not Scheduled</td>
               </tr>
               <tr>
+                <td className="header-row">Procentia</td>
+                <td className="completed">Complete</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+                <td>Not Scheduled</td>
+              </tr>
+              <tr>
                 <td className="header-row">GE Aerospace</td>
                 <td className="completed">Complete</td>
                 <td>Not Scheduled</td>

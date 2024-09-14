@@ -46,7 +46,12 @@ const Login = () => {
   :
     <>
       <h1 className="mb-10 text-center">Login</h1>
-      <form className="flex flex-col w-1/2 mx-auto" onSubmit={handleLogin}>
+      <form 
+        className="flex flex-col w-1/2 mx-auto" 
+        onSubmit={handleLogin}
+        action="/auth/pw-login"
+        method="POST"
+      >
         <label>Email:</label>
         <input type="email" ref={emailInputRef} required />
 
