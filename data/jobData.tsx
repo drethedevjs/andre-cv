@@ -1,10 +1,19 @@
 import { JobProps } from "@/interfaces/JobProps";
 
 let jobData: Array<JobProps> = [{
-  company: "Best Lawyers",
+  company_name: "Booz Allen Hamilton",
+  position: "Software Engineer II",
+  yearRange: "October 2024 - Present",
+  position_details: [
+    "Empowering people to change the world!"
+  ],
+  isRemote: true
+},
+{
+  company_name: "Best Lawyers",
   position: "Software Engineer II",
   yearRange: "Jun 2023 - Aug 2024",
-  description: [
+  position_details: [
     "Using Vue.js, Bootstrap, and .NET MVC, .NET 6 & 7, .NET Framework, and Entity Framework Core to build and maintain pages in our application ecosystem.",
     "Used Telerik Kendo UI components to update and create web pages.",
     "Using SQL Server to create stored procedures for new and existing projects.",
@@ -16,10 +25,10 @@ let jobData: Array<JobProps> = [{
   isRemote: true
 },
 {
-  company: "Plex by Rockwell Automation",
+  company_name: "Plex by Rockwell Automation",
   position: "Software Engineer I",
   yearRange: "May 2021 - Jun 2023",
-  description: [
+  position_details: [
     "Used .NET MVC, .NET Core, and .NET Framework to build and maintain our ERP web applications and REST APIs.",
     "Used SQL Server to create stored procedures for new and existing projects and wrote T-SQLT to test them.",
     "Using Azure DevOps to create pull requests and perform code reviews.",
@@ -33,10 +42,10 @@ let jobData: Array<JobProps> = [{
   isRemote: true
 },
 {
-  company: "iDrive Fulfillment",
+  company_name: "iDrive Fulfillment",
   position: "Software Engineer I",
   yearRange: "Aug 2019 - May 2021",
-  description: [
+  position_details: [
     "Using AngularJS and .NET Core and .NET Framework to build and maintain pages in our application ecosystem.",
     "Used SQL Server to create and maintain stored procedures.",
     "Re-engineered a notification system so users can subscribe themselves. This freed us engineers from having to do a deployment with every request.",
@@ -49,10 +58,10 @@ let jobData: Array<JobProps> = [{
   isRemote: true
 },
 {
-  company: "Fayette County Public Schools",
+  company_name: "Fayette County Public Schools",
   position: "Software Engineer I",
   yearRange: "Sept 2018 - Aug 2019",
-  description: [
+  position_details: [
     "Developed two .NET Core web applications: one allowing users to log incoming phone calls for administrative assistants, while the other streamlined the management of incoming requests for the dev team.",
     "Maintained two online forms utilizing a low-code framework and customized logic using C#."
   ],
