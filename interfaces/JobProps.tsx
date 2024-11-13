@@ -1,7 +1,14 @@
 export interface JobProps {
-  company: string;
+  id: number;
+  company_name: string;
   position: string,
   yearRange: string;
-  description: Array<string>;
+  position_details: Array<PositionDetails>;
   isRemote: boolean;
 };
+
+export interface PositionDetails {
+  id: number;
+  description: string;
+  position_id: number;
+}

@@ -1,15 +1,18 @@
 'use client'
-import { JobProps } from "@/interfaces/JobProps";
+import { JobProps, PositionDetails } from "@/interfaces/JobProps";
 import Image from 'next/image';
 
 const Job: React.FC<{job: JobProps}> = ({ job }) => {
-  const handleCopy = (description: Array<string>) => navigator.clipboard.writeText(description.join("\n"));
+  const handleCopy = (positionDetails: Array<PositionDetails>) => {
+    let descriptions = positionDetails.map(pd => pd.description);
+    navigator.clipboard.writeText(descriptions.join("\n"))
+  };
 
   return (
     <div className="border-4 border-slate-400 shadow-md sm:p-6 p-3 rounded-md">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <h3 className="sm:mb-1">{job.position}, {job.company}</h3>
+          <h3 className="sm:mb-1">{job.position}, {job.company_name}</h3>
           <span className="remote">Remote</span>
         </div>
 
@@ -19,14 +22,14 @@ const Job: React.FC<{job: JobProps}> = ({ job }) => {
           width={35}
           height={35}
           className="ml-auto p-1 hover:border hover:border-primary hover:rounded-lg active:bg-slate-200 sm:visible invisible"
-          onClick={() => handleCopy(job.description)} />
+          onClick={() => handleCopy(job.position_details)} />
       </div>
       <h4 className="mb-1"><i>{job.yearRange}</i></h4>
 
       <ul className="list-disc sm:pl-16 pl-5 md:text-xl">
-        {job.description.map((d: string, idx: Number) => {
+        {job.position_details.map((d: PositionDetails) => {
           return (
-            <li key={idx.toString()}>{d}</li>
+            <li key={d.id.toString()}>{d.description}</li>
           );
         })}
       </ul>
