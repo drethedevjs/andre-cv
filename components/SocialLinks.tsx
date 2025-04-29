@@ -1,21 +1,58 @@
-import Image from "next/image";
+import {
+  faBitbucket,
+  faGithubSquare,
+  faLinkedinIn
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const SocialLinks: React.FC<{opacity: number}> = ({opacity}) => {
+const SocialLinks = ({
+  opacity,
+  color = "text-white",
+  hoverColor = "text-white"
+}: {
+  opacity: number;
+  color?: string;
+  hoverColor?: string;
+}) => {
   return (
     <div className="flex flex-row">
-        <a href="https://www.linkedin.com/in/drethedev/" target="_blank" className="social">
-          <Image src="/linkedin-logo.png" alt="LinkedIn logo" className={`opacity-${opacity}`} width={30} height={30} />
-        </a>
+      <a
+        href="https://www.linkedin.com/in/drethedev/"
+        target="_blank"
+        className="social"
+      >
+        <FontAwesomeIcon
+          icon={faLinkedinIn}
+          size="lg"
+          className={`${color} ${hoverColor} transition-colors`}
+        />
+      </a>
 
-        <a href="https://github.com/drethedevjs" target="_blank" className="social">
-          <Image src="/github-logo.png" alt="GitHub logo" className={`opacity-${opacity}`} width={30} height={30} />
-        </a>
+      <a
+        href="https://github.com/drethedevjs"
+        target="_blank"
+        className="social"
+      >
+        <FontAwesomeIcon
+          icon={faGithubSquare}
+          size="lg"
+          className={`${color} ${hoverColor} transition-colors`}
+        />
+      </a>
 
-        <a href="https://bitbucket.org/drethedev/workspace/overview/" target="_blank" className="social">
-          <Image src="/bitbucket-logo.png" alt="Bitbucket logo" className={`opacity-${opacity}`} width={30} height={30} />
-        </a>
-      </div>
+      <a
+        href="https://bitbucket.org/drethedev/workspace/overview/"
+        target="_blank"
+        className="social"
+      >
+        <FontAwesomeIcon
+          icon={faBitbucket}
+          size="lg"
+          className={`${color} ${hoverColor} transition-colors`}
+        />
+      </a>
+    </div>
   );
-}
+};
 
 export default SocialLinks;

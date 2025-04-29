@@ -33,10 +33,14 @@ export default function Home() {
 
           <hr className="mb-10"></hr>
 
-          <SocialLinks opacity={100} />
+          <SocialLinks
+            opacity={100}
+            color={"text-secondary"}
+            hoverColor={"hover:text-primary"}
+          />
 
           <p className="mb-10 text-3xl">ANDRE THOMAS</p>
-          <h1>Full Stack Engineer</h1>
+          <h1 className="cv-gradient">Full Stack Engineer</h1>
 
           <p className="mt-8 lg:text-2xl md:text-xl text-center">
             Building the Future with .NET: Passionate Engineer, Proven Results

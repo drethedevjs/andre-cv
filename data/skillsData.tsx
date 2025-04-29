@@ -4,7 +4,6 @@ let skillsData: Array<SkillsProps> = [
   { name: ".NET", proficient: true },
   { name: ".NET Core", proficient: true },
   { name: ".NET Framework", proficient: true },
-  { name: "AngularJS", proficient: true },
   { name: "ASP.NET", proficient: true },
   { name: "ASP.NET Core", proficient: true },
   { name: "Azure", proficient: true },
@@ -22,13 +21,16 @@ let skillsData: Array<SkillsProps> = [
   { name: "RESTful API", proficient: true },
   { name: "Telerik Kendo UI", proficient: true },
   { name: "Vue.js", proficient: true },
+  { name: "Redux", proficient: false },
   { name: "xUnit", proficient: true },
   { name: "React.js", proficient: false },
   { name: "Next.js", proficient: false },
   { name: "MongoDB", proficient: false },
   { name: "Express.js", proficient: false },
   { name: "Node.js", proficient: false },
-  { name: "Tailwind CSS", proficient: false }
-]
+  { name: "Tailwind CSS", proficient: true },
+  { name: "daisyUI", proficient: true },
+  { name: "Flowbite CSS", proficient: true }
+];
 
 export default skillsData;

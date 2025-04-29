@@ -7,7 +7,11 @@ h1 {
 }
 
 h2 {
-  @apply lg:text-7xl md:text-5xl sm:text-5xl text-4xl font-semibold;
+  @apply lg:text-7xl md:text-5xl sm:text-5xl text-4xl font-semibold cv-gradient;
+}
+
+.cv-gradient {
+  @apply bg-gradient-to-r from-orange-500 via-amber-400 to-emerald-500 to-20% bg-clip-text text-transparent;
 }
 
 h3 {
@@ -34,7 +38,8 @@ tbody > tr {
   @apply hover:bg-orange-50;
 }
 
-th, td {
+th,
+td {
   @apply border border-slate-400 p-5;
 }
 
@@ -43,11 +48,11 @@ th, td {
 }
 
 .skill {
-  @apply p-2 text-xl border border-slate-900 text-slate-900 rounded-md;
+  @apply p-2 text-xl border-2 border-primary text-emerald-700 rounded-md;
 }
 
 .tech-used {
-  @apply p-2 text-sm bg-gray-200 text-gray-500 rounded-md;
+  @apply p-2 text-sm bg-gray-200 text-gray-500 rounded-md hover:bg-gradient-to-r hover:from-orange-500 hover:to-green-400 hover:text-white transition-colors;
 }
 
 .social {
