@@ -24,6 +24,29 @@ let jobData: Array<JobProps> = [
         description:
           "Used Entity Framework Core to perform operations on the data in a SQL Server database.",
         position_id: 3
+      },
+      {
+        id: 4,
+        description:
+          "Migrating old APIs to use newer .NET 8 and Entity Framework Core features.",
+        position_id: 4
+      },
+      {
+        id: 5,
+        description:
+          "Migrating React, Express.js, Node, Mongo (MERN), and .NET app from GitLab hosting to Azure App Services.",
+        position_id: 5
+      },
+      {
+        id: 6,
+        description:
+          "Building features and squashing bugs in Vuejs 2 and .NET Framework 4.7.2 system.",
+        position_id: 6
+      },
+      {
+        id: 7,
+        description: "Managing tickets and deployments in Azure DevOps.",
+        position_id: 7
       }
     ],
     isRemote: true
