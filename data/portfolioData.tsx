@@ -2,35 +2,27 @@ import { WebsiteProps } from "@/interfaces/WebsiteProps";
 
 const portfolioData: Array<WebsiteProps> = [
   {
-    imageSrc: "/portfolio/nam-site.png",
-    alt: "Screenshot of Not Another Mug Website",
-    classes: "hover:bg-primary rounded-lg",
-    width: 320,
-    height: 221,
-    link: "https://not-another-mug.vercel.app/",
-    name: "Not Another Mug",
-    target: "_blank",
-    technologies: [
-      "React.js",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JavaScript"
-    ]
-  },
-  {
-    imageSrc: "/portfolio/drecv-site.png",
-    alt: "Screenshot of the Andre CV Website",
+    id: 1,
+    imageSrc: "/portfolio/billow-site.png",
+    alt: "Screenshot of Billow's website",
     classes: "overlay",
     width: 320,
     height: 221,
-    link: "/",
-    name: "Andre CV",
-    target: "_self",
-    technologies: ["Next.js", "TypeScript", "React.js", "JavaScript"]
+    link: "https://github.com/drethedevjs/billow/",
+    name: "Billow",
+    target: "_blank",
+    technologies: [
+      "Next.js",
+      "React.js",
+      "Redux",
+      "Tailwind",
+      "Vee Validate",
+      "TypeScript",
+      "Flowbite"
+    ]
   },
   {
+    id: 2,
     imageSrc: "/portfolio/npp-site.png",
     alt: "Screenshot of the Next Play Project Website",
     classes: "overlay",
@@ -51,6 +43,7 @@ const portfolioData: Array<WebsiteProps> = [
     ]
   },
   {
+    id: 3,
     imageSrc: "/portfolio/over-the-river.png",
     alt: "Screenshot of a family reunion website",
     classes: "overlay",
@@ -67,26 +60,9 @@ const portfolioData: Array<WebsiteProps> = [
       "Flowbite"
     ]
   },
+
   {
-    imageSrc: "/portfolio/billow-site.png",
-    alt: "Screenshot of Billow's website",
-    classes: "overlay",
-    width: 320,
-    height: 221,
-    link: "https://github.com/drethedevjs/billow/",
-    name: "Billow",
-    target: "_blank",
-    technologies: [
-      "Next.js",
-      "React.js",
-      "Redux",
-      "Tailwind",
-      "Vee Validate",
-      "TypeScript",
-      "Flowbite"
-    ]
-  },
-  {
+    id: 4,
     imageSrc: "/portfolio/ep-site.png",
     alt: "Screenshot of the Eleventh & Pemberton site Website",
     classes: "overlay",
@@ -104,6 +80,37 @@ const portfolioData: Array<WebsiteProps> = [
       "Axios",
       "Express.js"
     ]
+  },
+  {
+    id: 5,
+    imageSrc: "/portfolio/nam-site.png",
+    alt: "Screenshot of Not Another Mug Website",
+    classes: "hover:bg-primary rounded-lg",
+    width: 320,
+    height: 221,
+    link: "https://not-another-mug.vercel.app/",
+    name: "Not Another Mug",
+    target: "_blank",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript"
+    ]
+  },
+  {
+    id: 6,
+    imageSrc: "/portfolio/drecv-site.png",
+    alt: "Screenshot of the Andre CV Website",
+    classes: "overlay",
+    width: 320,
+    height: 221,
+    link: "/",
+    name: "Andre CV",
+    target: "_self",
+    technologies: ["Next.js", "TypeScript", "React.js", "JavaScript"]
   }
 ];
 

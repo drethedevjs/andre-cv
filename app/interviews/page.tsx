@@ -17,25 +17,18 @@ const page = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="header-row">Agilify</td>
-                <td className="completed">Complete</td>
-                <td className="completed">Technical</td>
-                <td className="completed">Complete</td>
-                <td className="scheduled">Awaiting Offer</td>
-              </tr>
-              <tr>
-                <td className="header-row">Humana Military</td>
-                <td className="completed">Complete</td>
-                <td className="completed">Complete</td>
-                <td className="completed">N/A</td>
-                <td className="bg-red-300">Offer Declined</td>
-              </tr>
-              <tr>
                 <td className="header-row">Booz Allen Hamilton</td>
                 <td className="completed">Complete</td>
                 <td className="completed">Completed</td>
                 <td className="completed">N/A</td>
                 <td className="offer">Offer Accepted!</td>
+              </tr>
+              <tr>
+                <td className="header-row">Agilify</td>
+                <td className="completed">Complete</td>
+                <td className="completed">Technical</td>
+                <td className="completed">Complete</td>
+                <td className="scheduled">Awaiting Offer</td>
               </tr>
               <tr>
                 <td className="header-row">CereCore HCA Healthcare</td>
@@ -47,14 +40,14 @@ const page = () => {
               <tr>
                 <td className="header-row">Xenith Solutions</td>
                 <td className="completed">Complete</td>
-                <td className="scheduled">9/13</td>
+                <td className="completed">Complete</td>
                 <td>Not Scheduled</td>
                 <td>Not Scheduled</td>
               </tr>
               <tr>
                 <td className="header-row">OptumServe Health Services</td>
                 <td className="completed">Complete</td>
-                <td className="scheduled">9/11</td>
+                <td className="completed">Complete</td>
                 <td>Not Scheduled</td>
                 <td>Not Scheduled</td>
               </tr>
@@ -68,16 +61,16 @@ const page = () => {
               <tr>
                 <td className="header-row">Procentia</td>
                 <td className="completed">Complete</td>
-                <td>Not Scheduled</td>
+                <td className="completed">Complete</td>
                 <td>Not Scheduled</td>
                 <td>Not Scheduled</td>
               </tr>
               <tr>
-                <td className="header-row">GE Aerospace</td>
+                <td className="header-row">Humana Military</td>
                 <td className="completed">Complete</td>
-                <td>Not Scheduled</td>
-                <td>Not Scheduled</td>
-                <td>Not Scheduled</td>
+                <td className="completed">Complete</td>
+                <td className="completed">N/A</td>
+                <td className="bg-red-300">Offer Declined</td>
               </tr>
             </tbody>
           </table>

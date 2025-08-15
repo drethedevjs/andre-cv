@@ -12,9 +12,13 @@ const Job: React.FC<{ job: JobProps }> = ({ job }) => {
     <div className="border-4 border-secondary shadow-md sm:p-6 p-3 rounded-md">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <h3 className="sm:mb-1">
+          <h3 className="md:flex hidden">
             {job.position}, {job.company_name}
           </h3>
+          <div className="flex flex-col md:hidden">
+            <h3 className="text-xl">{job.company_name}</h3>
+            <h4>{job.position}</h4>
+          </div>
           <span className="remote">Remote</span>
         </div>
 

@@ -1,7 +1,7 @@
 import { WebsiteProps } from "@/interfaces/WebsiteProps";
 import Image from "next/image";
 
-const Website: React.FC<{ website: WebsiteProps }> = ({ website }) => {
+const Website = ({ website }: { website: WebsiteProps }) => {
   return (
     <div>
       <div className="relative group w-80 m-5 shadow-lg rounded-md">

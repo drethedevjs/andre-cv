@@ -4,7 +4,6 @@ import { getSupabaseBrowserClient } from "../supabase-utils/browserClient";
 import { useRouter } from "next/navigation";
 
 const Login = () => {
-  // window.location.href = "/";
   const emailInputRef = useRef<HTMLInputElement | null>(null);
   const passwordInputRef = useRef<HTMLInputElement | null>(null);
   const supabase = getSupabaseBrowserClient();

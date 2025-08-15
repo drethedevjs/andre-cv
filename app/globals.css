@@ -72,7 +72,7 @@ td {
 }
 
 .remote {
-  @apply bg-primary p-1 ml-3 text-sm text-white rounded-lg w-20 h-7 sm:visible invisible;
+  @apply bg-primary p-1 ml-3 text-sm text-white rounded-lg w-20 h-7 sm:flex hidden;
 }
 
 .offer {
