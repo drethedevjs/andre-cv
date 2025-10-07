@@ -11,6 +11,9 @@ export default function Header() {
       >
         Download Resume
       </Link>
+      <Link className="header-link" href="/chat">
+        Chat with Me
+      </Link>
       <Link className="header-link" href="/">
         Home
       </Link>

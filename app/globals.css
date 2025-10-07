@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Preline UI */
+@import "preline/variants.css";
+@source "../node_modules/preline/dist/*.js";
+
 h1 {
   @apply lg:text-6xl md:text-6xl sm:text-5xl text-4xl font-bold;
 }
@@ -11,7 +15,7 @@ h2 {
 }
 
 .cv-gradient {
-  @apply bg-gradient-to-r from-orange-500 via-amber-400 to-emerald-500 to-20% bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-orange-500 via-amber-400 to-emerald-500 to-80% bg-clip-text text-transparent;
 }
 
 h3 {
@@ -93,4 +97,8 @@ label {
 
 .header-link {
   @apply ml-3 border-b-4 border-white hover:border-primary p-1 transition-all;
+}
+
+.chat-box {
+  @apply ring-1 ring-primary rounded-lg h-1/2 min-h-96 p-8 mt-10 shadow-inner mb-8;
 }
