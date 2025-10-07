@@ -1,22 +1,58 @@
-# Andre Thomas, .NET Engineer
+# 👨🏾‍💻 Andre Thomas — CV App (AI‑enabled)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and uses Tailwind.css.
+## 🌟 Overview
 
-I created this so that recruiters and hiring managers can easily see my skills and job history. If it hasn't been already, I will deploy this using vercel.
+This is my interactive CV built with modern web technologies. It showcases my skills, experience, education, and selected projects in a sleek, engaging format. The app also includes an **AI chatbot** 🤖 that assumes my professional persona and answers questions a recruiter or hiring manager might ask (e.g., background, projects, responsibilities, tools, and strengths).
 
-## Getting Started
+## ✨ Features
 
-First, run the development server:
+- **📋 Interactive CV**: Clean, responsive UI for experience, education, skills, and portfolio
+- **🤖 AI Chatbot (Persona)**: Answers questions as if it were me, tailored to potential employer queries
+- **⚡ Fast & Deployable**: Optimized for deployment on modern platforms
+- **📱 Fully Responsive**: Looks great on desktop, tablet, and mobile devices
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js (^15)
+- **Language**: TypeScript (^5)
+- **UI**: React (^18), Tailwind CSS (^3), Preline UI
+- **Icons**: Font Awesome
+- **AI Integration**: Custom chatbot persona
+
+## 🚀 Getting Started
+
+**Prerequisites**: Node.js 18+ and npm
+
+1. **Install dependencies**:
+
+```bash
+npm install
+```
+
+2. Run the development server:
 
 ```bash
 npm run dev
 ```
 
-## Learn More
+3. Build and start production:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build && npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open `http://localhost:3000` in your browser to see the result! 🎉
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 📜 Scripts
+
+`npm run dev` — 🔥 Start the local dev server
+
+`npm run build` — 🏗️ Build for production
+
+`npm start` — ▶️ Run the production server
+
+`npm run lint` — 🧹 Lint the project
+
+## 🌐 Deployment
+
+This app is designed to deploy easily to platforms like Vercel. After pushing to a repository, connect it to Vercel and deploy with zero configuration!
