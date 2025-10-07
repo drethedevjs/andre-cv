@@ -100,5 +100,5 @@ label {
 }
 
 .chat-box {
-  @apply ring-1 ring-primary rounded-lg h-1/2 min-h-96 p-8 mt-10 shadow-inner mb-8;
+  @apply ring-1 ring-primary rounded-lg h-96 overflow-scroll p-8 mt-10 shadow-inner mb-8;
 }

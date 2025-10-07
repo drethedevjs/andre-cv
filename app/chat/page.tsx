@@ -1,8 +1,9 @@
 "use client";
 import ChatMessage from "@/interfaces/chatMessage";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Chat = () => {
+  const chatBoxRef = useRef<HTMLDivElement>(null);
   const [userMsg, setUseMsg] = useState<string>("");
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
@@ -11,6 +12,13 @@ const Chat = () => {
       sender: "user"
     }
   ]);
+
+  useEffect(() => {
+    const el = chatBoxRef.current;
+    if (!el) return;
+
+    el.scrollTo({ top: el.scrollHeight, behavior: "smooth" });
+  }, [messages]);
 
   const sendMsg = () => {
     if (!userMsg) return;
@@ -40,7 +48,7 @@ const Chat = () => {
       </section>
 
       <section>
-        <div className="chat-box">
+        <div className="chat-box" ref={chatBoxRef}>
           <ul className="space-y-5">
             <li className="max-w-lg flex gap-x-2 sm:gap-x-4">
               <div className="bg-white border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700">
