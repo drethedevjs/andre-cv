@@ -1,5 +1,6 @@
 export default interface ChatMessage {
-  text: string;
-  dateTime: Date;
-  sender: "bot" | "user";
+  content: string;
+  role: ChatterRole;
 }
+
+export type ChatterRole = "system" | "user" | "assistant";

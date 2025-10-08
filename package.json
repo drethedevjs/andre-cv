@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "type": "module",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -15,7 +16,10 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "font-awesome": "^4.7.0",
+    "groq": "^4.10.2",
+    "groq-sdk": "^0.33.0",
     "next": "^15.5.4",
+    "pdfreader": "^3.0.7",
     "preline": "^3.2.3",
     "react": "^18",
     "react-dom": "^18"
