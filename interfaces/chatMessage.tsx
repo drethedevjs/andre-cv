@@ -3,4 +3,4 @@ export default interface ChatMessage {
   role: ChatterRole;
 }
 
-export type ChatterRole = "system" | "user" | "assistant";
+export type ChatterRole = "system" | "user" | "assistant" | "judge";

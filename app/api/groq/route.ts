@@ -7,12 +7,38 @@ const groq = new Groq({apiKey: process.env.GROQ_API_KEY});
 
 export async function POST(request: Request) {
   const res = await request.json();
-  console.log("This is the request body: ", res.messages[0])
   
   const pdfPath = join(process.cwd(), "app/api/groq/LinkedInProfile.pdf");
   const linkedInProfileContents = await extractPdfText(pdfPath);
 
-  const messages: ChatCompletionMessageParam[] = [
+  const messages: ChatCompletionMessageParam[] = getMessages(res.messages, linkedInProfileContents);
+
+  const response = await groq.chat.completions.create({
+    messages: messages,
+    model: "openai/gpt-oss-20b",
+  });
+
+  return Response.json(response)
+}
+
+const extractPdfText = (pdfPath: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new PdfReader();
+    let text = "";
+    reader.parseFileItems(pdfPath, (err, item) => {
+      if (err) return reject(err);
+      if (!item) return resolve(text.trim()); // end of file
+      if (item.text) text += item.text + " ";
+    });
+  });
+}
+
+const getMessages: 
+  (msgHistory: ChatCompletionMessageParam[],
+    linkedInProfileContents: string) => ChatCompletionMessageParam[]
+  = (msgHistory: ChatCompletionMessageParam[],
+    linkedInProfileContents: string) => {
+  return [
     {
       role: "system",
       content: "You are acting as Andre who is seeking a role as a senior software engineer. \
@@ -37,25 +63,6 @@ export async function POST(request: Request) {
       role: "system",
       content: `Don't make things up. If you can't reasonably derive it from the LinkedIn profile then give the most you can give or say that you don't have that information.`,
     },
-    ...res.messages
+    ...msgHistory
   ];
-
-  const response = await groq.chat.completions.create({
-    messages: messages,
-    model: "openai/gpt-oss-20b",
-  });
-
-  return Response.json(response)
-}
-
-const extractPdfText = (pdfPath: string): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const reader = new PdfReader();
-    let text = "";
-    reader.parseFileItems(pdfPath, (err, item) => {
-      if (err) return reject(err);
-      if (!item) return resolve(text.trim()); // end of file
-      if (item.text) text += item.text + " ";
-    });
-  });
 }
