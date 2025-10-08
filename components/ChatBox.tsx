@@ -8,10 +8,12 @@ import Suggestions from "./Suggestions";
 const ChatBox = () => {
   const chatBoxRef = useRef<HTMLDivElement>(null);
   const [userMsg, setUseMsg] = useState<string>("");
-  const [suggestions, setSuggestions] = useState<string[]>([
-    // "this is a suggestion"
-  ]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
+  // The messageHistory variable is for sending relevant messages to the mimicking llm.
+  // I'm separating this into another array so that the user can see his/her past
+  // messages and but allow only relevant messages to be responded to by the mimicking llm.
+  const [messageHistory, setMessageHistory] = useState<ChatMessage[]>([]);
 
   useEffect(() => {
     const el = chatBoxRef.current;
@@ -54,11 +56,17 @@ const ChatBox = () => {
   };
 
   const askAi = async () => {
-    const msgWithoutJudge = messages.filter((m) => m.role !== "judge");
+    const relevantMsg: ChatMessage = {
+      content: userMsg,
+      role: "user"
+    };
 
     const body = {
-      messages: [...msgWithoutJudge, { role: "user", content: userMsg }]
+      messages: [...messageHistory, relevantMsg]
     };
+
+    setMessageHistory((prevMessages) => [...prevMessages, relevantMsg]);
+
     const response = await cvPost("groq", body);
 
     if (!response.ok)
