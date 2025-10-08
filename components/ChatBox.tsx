@@ -8,6 +8,7 @@ import Suggestions from "./Suggestions";
 const ChatBox = () => {
   const chatBoxRef = useRef<HTMLDivElement>(null);
   const [userMsg, setUseMsg] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   // The messageHistory variable is for sending relevant messages to the mimicking llm.
@@ -25,6 +26,7 @@ const ChatBox = () => {
   const sendMsg = async () => {
     setSuggestions([]);
     addMsgToChatBox("user", userMsg);
+    setIsLoading(true);
     const judgement: PromptJudgement = JSON.parse(await askGemJudge());
 
     if (judgement.isRelevant) await askAi();
@@ -32,6 +34,7 @@ const ChatBox = () => {
       addMsgToChatBox("judge", judgement.reason);
       setSuggestions(judgement.suggestions);
     }
+    setIsLoading(false);
   };
 
   const askGemJudge = async () => {
@@ -81,7 +84,7 @@ const ChatBox = () => {
   return (
     <>
       <section>
-        <div className="chat-box" ref={chatBoxRef}>
+        <div className="chat-box relative" ref={chatBoxRef}>
           <ul className="space-y-2">
             <li className="max-w-lg flex gap-x-2 sm:gap-x-4">
               <div className="bg-white border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700">
@@ -90,7 +93,7 @@ const ChatBox = () => {
                 </h3>
                 <p className="text-xl">
                   Hi there, I'm Andre's chatbot. Feel free to ask me anything
-                  related to my job history
+                  related to my job history.
                 </p>
               </div>
             </li>
@@ -126,6 +129,13 @@ const ChatBox = () => {
               }
             })}
           </ul>
+          {isLoading && (
+            <div
+              className="absolute bottom-10 left-10 animate-spin inline-block size-12 border-4 border-current border-t-transparent text-primary rounded-full"
+              role="status"
+              aria-label="loading"
+            ></div>
+          )}
         </div>
         <div className="flex justify-between gap-4 mb-5">
           <div className="w-full">
