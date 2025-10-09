@@ -30,7 +30,8 @@ let skillsData: Array<SkillsProps> = [
   { name: "Node.js", proficient: false },
   { name: "Tailwind CSS", proficient: true },
   { name: "daisyUI", proficient: true },
-  { name: "Flowbite CSS", proficient: true }
+  { name: "Flowbite CSS", proficient: true },
+  { name: "AI Enabling Code", proficient: false }
 ];
 
 export default skillsData;
