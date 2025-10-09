@@ -2,13 +2,14 @@
 import ChatMessage, { ChatterRole } from "@/interfaces/chatMessage";
 import PromptJudgement from "@/interfaces/promptJudement";
 import { cvPost } from "@/utils/fetching";
+import { Bot } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Suggestions from "./Suggestions";
 
 const ChatBox = () => {
   const chatBoxRef = useRef<HTMLDivElement>(null);
   const [userMsg, setUseMsg] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   // The messageHistory variable is for sending relevant messages to the mimicking llm.
@@ -17,6 +18,16 @@ const ChatBox = () => {
   const [messageHistory, setMessageHistory] = useState<ChatMessage[]>([]);
 
   useEffect(() => {
+    if (!messages.length) {
+      setTimeout(() => {
+        addMsgToChatBox(
+          "assistant",
+          "Hi there, I'm Andre's chatbot. Feel free to ask me anything related to my job history."
+        );
+
+        setIsLoading(false);
+      }, 2000);
+    }
     const el = chatBoxRef.current;
     if (!el) return;
 
@@ -98,20 +109,8 @@ const ChatBox = () => {
   return (
     <>
       <section>
-        <div className="chat-box relative" ref={chatBoxRef}>
+        <div className="chat-box" ref={chatBoxRef}>
           <ul className="space-y-2">
-            <li className="max-w-lg flex gap-x-2 sm:gap-x-4">
-              <div className="bg-white border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700">
-                <h3 className="font-medium text-gray-800 dark:text-white cv-gradient">
-                  AI Andre
-                </h3>
-                <p className="text-xl">
-                  Hi there, I'm Andre's chatbot. Feel free to ask me anything
-                  related to my job history.
-                </p>
-              </div>
-            </li>
-
             {messages.map((message, idx) => {
               if (message.role !== "user") {
                 return (
@@ -121,6 +120,14 @@ const ChatBox = () => {
                         roleBasedBubbleStyles[message.role]
                       }  border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700`}
                     >
+                      {idx === 0 && (
+                        <div className="flex gap-2">
+                          <h3 className="font-medium text-gray-800 dark:text-white cv-gradient">
+                            AI Andre
+                          </h3>
+                          <Bot color="green" size={38} />
+                        </div>
+                      )}
                       <p className="text-xl">{message.content}</p>
                     </div>
                   </li>
@@ -149,6 +156,9 @@ const ChatBox = () => {
             ></div>
           )}
         </div>
+        <p className="italic text-gray-400 text-sm ml-5 mb-5">
+          Powered by Groq and Gemini
+        </p>
         <div className="flex justify-between gap-4 mb-5">
           <div className="w-full">
             <input
