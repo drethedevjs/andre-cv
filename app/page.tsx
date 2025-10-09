@@ -5,7 +5,9 @@ import Portfolio from "@/components/Portfolio";
 import Skills from "@/components/Skills";
 import SocialLinks from "@/components/SocialLinks";
 import skillsData from "@/data/skillsData";
+import { Bot } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -35,13 +37,18 @@ export default function Home() {
           Building the Future with JavaScript and .NET: Passionate Engineer,
           Proven Results
         </p>
-
-        <a
-          href="mailto:drethedevjs@gmail.com?subject=Dev%20Opportunity"
-          className="btn-lg mt-20"
-        >
-          Contact Me
-        </a>
+        <div className="flex flex-row gap-4">
+          <a
+            href="mailto:drethedevjs@gmail.com?subject=Dev%20Opportunity"
+            className="btn-lg mt-20"
+          >
+            Contact Me
+          </a>
+          <Link href="/chat" className="btn-lg mt-20 flex flex-row gap-3">
+            <Bot size={24} />
+            AI Chatbot
+          </Link>
+        </div>
       </div>
 
       <ExperienceSection />

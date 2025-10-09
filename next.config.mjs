@@ -1,10 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  redirects: async () => [{
-    source: "/logout",
-    destination: "auth/logout",
-    permanent: true
-  }]
+  // experimental: {
+  //   // Reduce memory usage during build
+  //   memoryBasedWorkersCount: true
+  // },
+  // // Optimize bundle size
+  // webpack: (config, { isServer }) => {
+  //   if (!isServer) {
+  //     config.resolve.fallback = {
+  //       ...config.resolve.fallback,
+  //       fs: false,
+  //       net: false,
+  //       tls: false
+  //     };
+  //   }
+  //   return config;
+  // }
 };
 
 export default nextConfig;
