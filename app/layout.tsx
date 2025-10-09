@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`flex flex-col min-h-screen ${inter.className}`}>
         <Header />
-        <main className="container mx-auto flex-grow">{children}</main>
+        <main className="container mx-auto grow">{children}</main>
         <Footer opacity={30} />
       </body>
       <PrelineScriptWrapper />

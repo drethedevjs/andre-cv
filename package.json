@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_OPTIONS='--max-old-space-size=15384' next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@google/genai": "^1.22.0",
+    "@tailwindcss/postcss": "^4.1.14",
     "font-awesome": "^4.7.0",
     "groq": "^4.10.2",
     "groq-sdk": "^0.33.0",
@@ -33,7 +34,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
     "postcss": "^8",
-    "tailwindcss": "^3.4.10",
+    "tailwindcss": "^4.1.14",
     "typescript": "^5"
   }
 }

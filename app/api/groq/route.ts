@@ -1,14 +1,17 @@
 import Groq from "groq-sdk";
-import { ChatCompletionMessageParam } from "groq-sdk/resources/chat.mjs";
+import { ChatCompletionMessageParam } from "groq-sdk/resources/chat/completions.mjs";
 import { join } from "node:path";
+import { PdfReader } from "pdfreader";
 
 const groq = new Groq({apiKey: process.env.GROQ_API_KEY});
 
 export async function POST(request: Request) {
   const res = await request.json();
+  
+  const pdfPath = join(process.cwd(), "app/api/groq/LinkedInProfile.pdf");
+  if (!pdfPath.includes(".pdf")) throw new Error("PDF does not exist.");
 
-  const profileTextPath = join(process.cwd(), "app/api/groq/LinkedInProfile.txt");
-  const linkedInProfileContents = await readText(profileTextPath);
+  const linkedInProfileContents = await extractPdfText(pdfPath);
 
   const messages: ChatCompletionMessageParam[] = getMessages(res.messages, linkedInProfileContents);
 
@@ -20,9 +23,16 @@ export async function POST(request: Request) {
   return Response.json(response)
 }
 
-const readText = async (filePath: string): Promise<string> => {
-  const { readFile } = await import("node:fs/promises");
-  return (await readFile(filePath, "utf8")).trim();
+const extractPdfText = (pdfPath: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new PdfReader();
+    let text = "";
+    reader.parseFileItems(pdfPath, (err, item) => {
+      if (err) return reject(err);
+      if (!item) return resolve(text.trim()); // end of file
+      if (item.text) text += item.text + " ";
+    });
+  });
 }
 
 const getMessages: 

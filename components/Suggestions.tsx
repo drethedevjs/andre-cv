@@ -5,7 +5,7 @@ export default function Suggestions({
 }) {
   return (
     <section id="suggestions" className="mb-10">
-      <h2 className="mb-4 p-2">Suggestions</h2>
+      <h2 className="mb-4 p-2 cv-gradient">Suggestions</h2>
       {suggestions.map((s, idx) => (
         <p
           key={idx}

@@ -1,21 +1,49 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --color-primary: #f97316;
+  --color-secondary: #10b981;
+  --color-accent: #ff6242;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 /* Preline UI */
-/* @import "preline/variants.css";
-@source "../node_modules/preline/dist/*.js"; */
+@import "preline/variants.css";
+@source "../node_modules/preline/dist/*.js";
+
+.cv-gradient {
+  @apply bg-linear-to-r from-orange-500 via-amber-400 to-emerald-500 to-80% bg-clip-text text-transparent;
+}
 
 h1 {
   @apply lg:text-6xl md:text-6xl sm:text-5xl text-4xl font-bold;
 }
 
 h2 {
-  @apply lg:text-7xl md:text-5xl sm:text-5xl text-4xl font-semibold cv-gradient;
-}
-
-.cv-gradient {
-  @apply bg-gradient-to-r from-orange-500 via-amber-400 to-emerald-500 to-80% bg-clip-text text-transparent;
+  @apply lg:text-7xl md:text-5xl sm:text-5xl text-4xl font-semibold;
 }
 
 h3 {
@@ -56,7 +84,7 @@ td {
 }
 
 .tech-used {
-  @apply p-2 text-sm bg-gray-200 text-gray-500 rounded-md hover:bg-gradient-to-r hover:from-orange-500 hover:to-green-400 hover:text-white transition-colors;
+  @apply p-2 text-sm bg-gray-200 text-gray-500 rounded-md hover:bg-linear-to-r hover:from-orange-500 hover:to-green-400 hover:text-white transition-colors;
 }
 
 .social {
@@ -72,7 +100,7 @@ td {
 }
 
 .overlay {
-  @apply absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-lg;
+  @apply absolute inset-0 bg-black/50 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out rounded-lg;
 }
 
 .remote {

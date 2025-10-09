@@ -72,13 +72,27 @@ const ChatBox = () => {
 
     const response = await cvPost("groq", body);
 
-    if (!response.ok)
+    if (!response.ok) {
       console.error("AI Andre--Something went wrong...", response.statusText);
+      addMsgToChatBox(
+        "error",
+        "I'm sorry but it appears that there was an error"
+      );
+      return;
+    }
 
     const llmResponse = await response.json();
     const { content, role } = llmResponse.choices[0].message;
 
     addMsgToChatBox(role, content);
+  };
+
+  const roleBasedBubbleStyles = {
+    user: "bg-white",
+    judge: "bg-secondary text-white",
+    error: "bg-accent text-white",
+    system: "",
+    assistant: ""
   };
 
   return (
@@ -104,9 +118,7 @@ const ChatBox = () => {
                   <li key={idx} className="max-w-lg flex gap-x-2 sm:gap-x-4">
                     <div
                       className={`${
-                        message.role === "judge"
-                          ? "bg-secondary text-white"
-                          : "bg-white"
+                        roleBasedBubbleStyles[message.role]
                       }  border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700`}
                     >
                       <p className="text-xl">{message.content}</p>
@@ -131,7 +143,7 @@ const ChatBox = () => {
           </ul>
           {isLoading && (
             <div
-              className="absolute bottom-10 left-10 animate-spin inline-block size-12 border-4 border-current border-t-transparent text-primary rounded-full"
+              className="bottom-10 left-10 animate-spin size-12 border-4 border-current border-t-transparent text-primary rounded-full"
               role="status"
               aria-label="loading"
             ></div>
@@ -140,17 +152,24 @@ const ChatBox = () => {
         <div className="flex justify-between gap-4 mb-5">
           <div className="w-full">
             <input
+              id="user-msg"
               type="text"
-              className="py-2.5 sm:py-3 px-4 block w-full h-16 mb-0 text-xl border-gray-200 rounded-lg sm:text-sm focus:!border-secondary focus:!ring-secondary disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+              className="py-2.5 sm:py-3 px-4 block w-full h-16 !mb-0 text-xl border-gray-200 rounded-lg sm:text-sm focus:border-secondary! focus:ring-secondary! disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600 disabled:bg-gray-200 disabled:cursor-not-allowed"
               placeholder="Talk to me..."
               value={userMsg}
+              disabled={isLoading}
               onChange={(e) => setUseMsg(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") sendMsg();
               }}
             />
           </div>
-          <button className="btn" type="submit" onClick={sendMsg}>
+          <button
+            className="btn disabled:!bg-primary/50 disabled:!border-primary/50 disabled:cursor-not-allowed"
+            type="submit"
+            onClick={sendMsg}
+            disabled={isLoading}
+          >
             Send
           </button>
         </div>
