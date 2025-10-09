@@ -108,17 +108,20 @@ const ChatBox = () => {
 
   return (
     <>
-      <section>
+      <section className="mx-5">
         <div className="chat-box" ref={chatBoxRef}>
           <ul className="space-y-2">
             {messages.map((message, idx) => {
               if (message.role !== "user") {
                 return (
-                  <li key={idx} className="max-w-lg flex gap-x-2 sm:gap-x-4">
+                  <li
+                    key={idx}
+                    className="max-w-5/6 lg:max-w-lg flex gap-x-2 sm:gap-x-4"
+                  >
                     <div
                       className={`${
                         roleBasedBubbleStyles[message.role]
-                      }  border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700`}
+                      }  border border-secondary rounded-2xl p-4 space-y-3 dark:bg-neutral-900 dark:border-neutral-700 dark:text-slate-50`}
                     >
                       {idx === 0 && (
                         <div className="flex gap-2">
@@ -128,7 +131,7 @@ const ChatBox = () => {
                           <Bot color="green" size={38} />
                         </div>
                       )}
-                      <p className="text-xl">{message.content}</p>
+                      <p className="text-base md:text-xl">{message.content}</p>
                     </div>
                   </li>
                 );
@@ -136,11 +139,13 @@ const ChatBox = () => {
                 return (
                   <li
                     key={idx}
-                    className="max-w-lg flex gap-x-2 sm:gap-x-4 ms-auto justify-end"
+                    className="max-w-5/6 lg:max-w-lg flex gap-x-2 sm:gap-x-4 ms-auto justify-end"
                   >
                     <div className="grow text-end space-y-3">
                       <div className="inline-block bg-primary rounded-2xl p-4 shadow-2xs">
-                        <p className="text-xl text-white">{message.content}</p>
+                        <p className="text-base md:text-xl text-white text-start">
+                          {message.content}
+                        </p>
                       </div>
                     </div>
                   </li>
@@ -159,12 +164,12 @@ const ChatBox = () => {
         <p className="italic text-gray-400 text-sm ml-5 mb-5">
           Powered by Groq and Gemini
         </p>
-        <div className="flex justify-between gap-4 mb-5">
+        <div className="flex flex-col lg:flex-row justify-between gap-4 mb-5">
           <div className="w-full">
             <input
               id="user-msg"
               type="text"
-              className="py-2.5 sm:py-3 px-4 block w-full h-16 !mb-0 text-xl border-gray-200 rounded-lg sm:text-sm focus:border-secondary! focus:ring-secondary! disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600 disabled:bg-gray-200 disabled:cursor-not-allowed"
+              className="py-2.5 sm:py-3 px-4 block w-full h-16 !mb-0 text-xl border-gray-200 rounded-lg sm:text-sm focus:border-secondary! focus:ring-secondary! disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-200 dark:placeholder-neutral-500 dark:focus:ring-neutral-600 disabled:bg-gray-200 disabled:cursor-not-allowed"
               placeholder="Talk to me..."
               value={userMsg}
               disabled={isLoading}

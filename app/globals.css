@@ -47,7 +47,7 @@ h2 {
 }
 
 h3 {
-  @apply lg:text-4xl md:text-3xl sm:text-2xl font-semibold;
+  @apply lg:text-4xl md:text-3xl text-2xl font-semibold;
 }
 
 h4 {
@@ -128,5 +128,5 @@ label {
 }
 
 .chat-box {
-  @apply ring-1 ring-primary rounded-lg h-[50vh] overflow-scroll p-8 mt-10 inset-shadow-sm mb-2 relative;
+  @apply ring-1 ring-primary rounded-lg h-[50vh] overflow-scroll p-4 lg:p-8 mt-10 inset-shadow-sm mb-2 relative dark:bg-slate-600;
 }

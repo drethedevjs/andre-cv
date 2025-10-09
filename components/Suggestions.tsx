@@ -4,7 +4,7 @@ export default function Suggestions({
   suggestions: string[];
 }) {
   return (
-    <section id="suggestions" className="mb-10">
+    <section id="suggestions" className="mb-10 mx-5">
       <h2 className="mb-4 p-2 cv-gradient">Suggestions</h2>
       {suggestions.map((s, idx) => (
         <p

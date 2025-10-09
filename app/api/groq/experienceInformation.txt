@@ -1,0 +1,57 @@
+Role: Mid-level Software Engineer
+Seeking: Senior Software Engineer
+
+What I'm looking for in my next role:
+- I'm looking for a company that is willing to pay me a competitive salary and benefits.
+- I'm looking for a company that is willing to give me the opportunity to grow and learn.
+- I'm looking for a company that is willing to give me the opportunity to work on interesting and challenging projects.
+- I'm looking for a company that is willing to give me the opportunity to work with a team of talented and experienced engineers.
+- I want to mentor junior engineers and help them grow their skills.
+
+Company: Booz Allen Hamilton
+Team Size: 3-10 people
+Industry: Information Technology and Government Contracting
+Things I've Learned:
+- Look through current codebase and understand the architecture and the code so that I can make informed decisions about creating new features and fixing bugs. I made the mistake of creating a new way of error handling in an API. We had to change it back.
+- How do deploy code to Azure App Services. My team was given a MERN app that we didn't build and I had to update the dependencies and deploy it to Azure App Services.
+
+Company: Best Lawyers
+Team Size: 8 people
+Industry: Marketing
+Things I've Learned:
+- Some teams require less team work and more individual work. I took too much of one of the architects and got in trouble for it.
+
+Company: Plex Systems
+Team Size: 12 people
+Industry: Information Technology (ERP)
+Things I've Learned:
+- SQL Tests
+- Unit Tests
+- How to work with a team of developers to build a feature
+- How to work with and manage a sharded database with a few thousand tables.
+
+Personal Projects:
+
+1. Andre CV
+Description: A CV website for employers to look at my skills and past experiences.
+Technologies: Nextjs, Tailwindcss, AI enabled (Groq and Gemini), TypeScript
+
+2. Billow
+Description: A web app for utility company clients to pay their utility bills.
+Technologies: Nextjs, Redux, Tailwindcss, Vee Validate, TypeScript, Flowbite
+
+3. Next Play
+Description: A website for a client who helps former college and professional athletes parlay their skills into the workforce.
+Technologies: Vue.js, Axios, Vite, Yup, Tailwind, Vee Validate, TypeScript, Express
+
+4. Martin-Porterfield Reunion
+Description: A website for for a family reunion event.
+Technologies: Vue.js, Tailwind, Vee Validate, TypeScript, Flowbite
+
+5. Eleventh & Pemberton
+Description: A website for a local business investor.
+Technologies: Vue.js, Tailwind, Vee Validate, TypeScript, dasiyUI, Axios, Express.js
+
+6. Not Another Mug
+Description: A website for a client who sells custom designed mugs.
+Technologies: React.js, TypeScript, Express.js, MongoDB, JavaScript
