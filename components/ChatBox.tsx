@@ -8,7 +8,7 @@ import Suggestions from "./Suggestions";
 
 const ChatBox = () => {
   const chatBoxRef = useRef<HTMLDivElement>(null);
-  const [userMsg, setUseMsg] = useState<string>("");
+  const [userMsg, setUserMsg] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -35,6 +35,7 @@ const ChatBox = () => {
   }, [messages]);
 
   const sendMsg = async () => {
+    setUserMsg("");
     setSuggestions([]);
     addMsgToChatBox("user", userMsg);
     setIsLoading(true);
@@ -65,7 +66,6 @@ const ChatBox = () => {
       content: message
     };
 
-    setUseMsg("");
     setMessages((prevMessages) => [...prevMessages, newMsg]);
   };
 
@@ -173,11 +173,15 @@ const ChatBox = () => {
               placeholder="Talk to me..."
               value={userMsg}
               disabled={isLoading}
-              onChange={(e) => setUseMsg(e.target.value)}
+              maxLength={200}
+              onChange={(e) => setUserMsg(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") sendMsg();
               }}
             />
+            <p className="text-neutral-400 mt-1 m-1 italic">
+              {userMsg.length}/200 characters remaining
+            </p>
           </div>
           <button
             className="btn disabled:!bg-primary/50 disabled:!border-primary/50 disabled:cursor-not-allowed"
