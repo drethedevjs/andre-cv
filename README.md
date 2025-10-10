@@ -7,7 +7,7 @@ This is my interactive CV built with modern web technologies. It showcases my sk
 ## ✨ Features
 
 - **📋 Interactive CV**: Clean, responsive UI for experience, education, skills, and portfolio
-- **🤖 AI Chatbot (Persona)**: Answers questions as if it were me, tailored to potential employer queries
+- **🤖 AI Chatbot (Persona)**: Answers questions as if it were me, tailored to potential employer queries. Gemini judges whether the user input is a reasonable/relevant comment or question and Groq responds to prompts that pass Gemini.
 - **⚡ Fast & Deployable**: Optimized for deployment on modern platforms
 - **📱 Fully Responsive**: Looks great on desktop, tablet, and mobile devices
 
