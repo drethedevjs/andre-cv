@@ -1,4 +1,5 @@
 // 'use client'
+import Certifications from "@/components/Certifications";
 import Education from "@/components/Education";
 import ExperienceSection from "@/components/Experience";
 import Portfolio from "@/components/Portfolio";
@@ -51,6 +52,7 @@ export default function Home() {
         </div>
       </div>
 
+      <Certifications />
       <ExperienceSection />
       <Skills skills={skillsData} />
       <Education />
