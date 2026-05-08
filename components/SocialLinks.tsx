@@ -41,7 +41,7 @@ const SocialLinks = ({
       </a>
 
       <a
-        href="https://bitbucket.org/drethedev/workspace/overview/"
+        href="https://bitbucket.org/drethedev/not-another-mug/src/master/"
         target="_blank"
         className="social"
       >
