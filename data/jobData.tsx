@@ -34,7 +34,7 @@ let jobData: Array<JobProps> = [
       {
         id: 5,
         description:
-          "Migrating React, Express.js, Node, Mongo (MERN), and .NET app from GitLab hosting to Azure App Services.",
+          "Migrating React, Express.js, Node, Mongo (MERN), and .NET app from two virtual machines to three Azure App Services.",
         position_id: 5
       },
       {
@@ -47,6 +47,30 @@ let jobData: Array<JobProps> = [
         id: 7,
         description: "Managing tickets and deployments in Azure DevOps.",
         position_id: 7
+      },
+      {
+        id: 8,
+        description:
+          "Supporting the lift-and-shift migration of the National Firefighter's Registry for Cancer application by serving as a technical liaison to non-technical team members and fielding their engineering questions.",
+        position_id: 1
+      },
+      {
+        id: 9,
+        description:
+          "Running DAST and SAST scans on the deployed containerized application and codebase to identify security vulnerabilities, and collaborating with the lead developer to remediate discovered issues.",
+        position_id: 1
+      },
+      {
+        id: 10,
+        description:
+          "Independently building a full rewrite of the National Firefighter's Registry application using Next.js and the U.S. Web Design System (USWDS) CSS library, using AI-assisted development with deliberate step-by-step code review to ensure accuracy and quality.",
+        position_id: 1
+      },
+      {
+        id: 11,
+        description:
+          "Leading AI adoption efforts on the team by researching and sharing findings and hands-on experiences with engineers who are newer to AI-assisted development workflows.",
+        position_id: 1
       }
     ],
     isRemote: true

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Job: React.FC<{ job: JobProps }> = ({ job }) => {
   const handleCopy = (positionDetails: Array<PositionDetails>) => {
-    let descriptions = positionDetails.map((pd) => pd.description);
+    let descriptions = positionDetails.map(pd => pd.description);
     navigator.clipboard.writeText(descriptions.join("\n"));
   };
 
@@ -35,9 +35,13 @@ const Job: React.FC<{ job: JobProps }> = ({ job }) => {
         <i>{job.yearRange}</i>
       </h4>
 
-      <ul className="list-disc sm:pl-16 pl-5 md:text-xl">
+      <ul className="md:text-xl sm:ml-14 ml-3 list-disc">
         {job.position_details.map((d: PositionDetails) => {
-          return <li key={d.id.toString()}>{d.description}</li>;
+          return (
+            <li key={d.id.toString()} className="items-start gap-2">
+              <span>{d.description}</span>
+            </li>
+          );
         })}
       </ul>
     </div>
