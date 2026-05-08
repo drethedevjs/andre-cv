@@ -19,8 +19,13 @@ const Certifications = () => {
           </p>
           <p className="text-xl">AZ-900</p>
           <p className="text-xl text-secondary">Microsoft</p>
-          <p className="text-lg mt-2"><span className="font-bold">Earned:</span> January 14, 2026</p>
-          <p className="text-lg"><span className="font-bold">Certification number:</span> U77394-C9B835</p>
+          <p className="text-lg mt-2">
+            <span className="font-bold">Earned:</span> January 14, 2026
+          </p>
+          <p className="text-lg">
+            <span className="font-bold">Certification number:</span>{" "}
+            U77394-C9B835
+          </p>
         </div>
       </div>
     </div>
