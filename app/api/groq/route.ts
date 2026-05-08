@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   let linkedInProfileContents = await extractPdfText(pdfPath);
 
   let extraContext:string = "";
-  const extraContextPath = resolve(process.cwd(), 'app/api/groq/experienceInformation.txt');
+  const extraContextPath = resolve(process.cwd(), 'app/api/groq/experienceInformation.md');
   if (fs.existsSync(extraContextPath)) {
     extraContext = await extractExtraContext(extraContextPath);
     linkedInProfileContents += "\n\n" + extraContext;
