@@ -16,6 +16,9 @@
 # production
 /build
 
+# generated resume PDF (regenerated at build time via prebuild script)
+/public/Andre_Thomas_Resume.pdf
+
 # misc
 .DS_Store
 *.pem
@@ -40,3 +43,10 @@ settings.json
 package-lock.json
 
 .env*
+
+# personal/job research notes
+anthroipic.md
+anthroipic_tailored.md
+data/anthropicJobData.ts
+components/pdf/ResumePDF.tsx
+.claude/settings.local.json

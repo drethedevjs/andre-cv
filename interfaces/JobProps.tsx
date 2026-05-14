@@ -11,4 +11,5 @@ export interface PositionDetails {
   id: number;
   description: string;
   position_id: number;
+  addToResume: boolean;
 }
