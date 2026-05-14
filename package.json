@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "generate-resume": "tsx scripts/generateResumePDF.tsx",
-    "generate-resume:anthropic": "tsx scripts/generateResumePDF.tsx --data=anthropic",
-    "prebuild": "tsx scripts/generateResumePDF.tsx"
+    "generate-resume:anthropic": "tsx scripts/generateResumePDF.tsx --data=anthropic"
   },
   "type": "module",
   "dependencies": {
