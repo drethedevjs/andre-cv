@@ -1,4 +1,4 @@
-import type { IStaticMethods } from "preline/dist";
+import type { HSStaticMethods } from "preline";
 
 declare global {
   interface Window {
@@ -11,7 +11,7 @@ declare global {
     VanillaCalendarPro;
 
     // Preline UI
-    HSStaticMethods: IStaticMethods;
+    HSStaticMethods: typeof HSStaticMethods;
   }
 }
 
