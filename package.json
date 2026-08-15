@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "generate-resume": "tsx scripts/generateResumePDF.tsx",
     "generate-resume:anthropic": "tsx scripts/generateResumePDF.tsx --data=anthropic"
   },
@@ -18,15 +18,15 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@google/genai": "^1.22.0",
-    "@react-pdf/renderer": "^4.5.1",
-    "@tailwindcss/postcss": "^4.1.14",
+    "@react-pdf/renderer": "^4.6.1",
+    "@tailwindcss/postcss": "^4.3.3",
     "font-awesome": "^4.7.0",
     "framer-motion": "^12.38.0",
     "groq": "^4.10.2",
     "groq-sdk": "^0.33.0",
     "lucide-react": "^0.545.0",
-    "next": "^16.1.4",
-    "pdfreader": "^3.0.7",
+    "next": "^16.3.1",
+    "pdfreader": "^3.0.8",
     "preline": "^3.2.3",
     "react": "^18",
     "react-dom": "^18"
@@ -37,10 +37,10 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^9",
-    "eslint-config-next": "^16.1.4",
+    "eslint-config-next": "^16.3.1",
     "postcss": "^8",
-    "tailwindcss": "^4.1.18",
-    "tsx": "^4.21.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.12",
     "typescript": "^5"
   }
 }
