@@ -2,10 +2,82 @@ import { JobProps } from "@/interfaces/JobProps";
 
 let jobData: Array<JobProps> = [
   {
+    id: 6,
+    company_name: "Booz Allen Hamilton",
+    position: "Software Engineer III",
+    yearRange: "April 2026 - Present",
+    position_details: [
+      {
+        id: 101,
+        description:
+          "Diagnosed and remediated an XSS-exploitable authentication vulnerability in PHLIP by moving JWT storage from client-side sessionStorage to an HTTP-only cookie, with all token management handled server-side.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 102,
+        description:
+          "Led a two-version React upgrade (v16 to v18) for PHLIP as the sole engineer on the project.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 103,
+        description:
+          "Partnered with another engineer to resolve a recurring production crash in the National Firefighter Registry (Mendix app on Azure Container Apps); investigated via Azure log analysis to pinpoint the failure to an unbounded database query, then brainstormed the fix together, capping the query and increasing Azure Container App memory allocation.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 104,
+        description:
+          "Contributed supporting CSS fixes for the National Firefighter Registry (NFR) web app and communicated technical findings and solutions to PM/BA stakeholders via standups and ad hoc calls, translating technical issues into actionable, non-technical terms.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 105,
+        description:
+          "Architected and built Prompt Buddy, a full-stack tool (Next.js, .NET Azure Function App, SQL Server) for centralizing reusable AI prompts, skills, and agent configuration files for the engineering team; directed a second engineer added to the project.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 106,
+        description:
+          "Scoped a prepopulation strategy for Prompt Buddy ahead of deployment, sourcing content from the target team's existing prompt/skill library to accelerate initial adoption.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 107,
+        description:
+          "Remediated ~40 application security findings on PHLIP, reducing all critical, high, and medium severity findings to zero within two weeks, including documented false-positive justifications for the formal remediation record.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 108,
+        description:
+          "Established continuous application security scanning on PHLIP and NFR using OpenText Fortify Audit Workbench (SAST) and OpenText Application Security CE 25.4 (DAST) on every code change to prevent regression.",
+        position_id: 6,
+        addToResume: true
+      },
+      {
+        id: 109,
+        description:
+          "Remediated ~50 Section 508 (federal accessibility) findings across two CDC applications (EASI, Navigator) — covering ARIA labeling, keyboard navigation, color contrast, DOM ordering, and modal focus management — using Axe automated testing, achieving formal compliance sign-off with fixes deployed to production.",
+        position_id: 6,
+        addToResume: true
+      }
+    ],
+    isRemote: true
+  },
+  {
     id: 1,
     company_name: "Booz Allen Hamilton",
     position: "Software Engineer II",
-    yearRange: "October 2024 - Present",
+    yearRange: "October 2024 - April 2026",
     position_details: [
       {
         id: 1,
@@ -80,6 +152,27 @@ let jobData: Array<JobProps> = [
         id: 11,
         description:
           "Leading AI adoption efforts on the team by researching and sharing findings and hands-on experiences with engineers who are newer to AI-assisted development workflows.",
+        position_id: 1,
+        addToResume: true
+      },
+      {
+        id: 12,
+        description:
+          "Created and maintained a shared repository of reusable AI skills and automations for the engineering team, driving early-stage adoption across the group.",
+        position_id: 1,
+        addToResume: true
+      },
+      {
+        id: 13,
+        description:
+          "Remediated ~40 application security findings on PHLIP using OpenText Fortify Audit Workbench (SAST) and OpenText Application Security web app CE 25.4 (DAST), reducing critical, high, and medium severity findings to zero within a two-week window; authored false-positive justification documentation for formal remediation records.",
+        position_id: 1,
+        addToResume: true
+      },
+      {
+        id: 14,
+        description:
+          "Led Section 508 accessibility remediation across two CDC applications (EASI, Navigator) using the Axe browser extension, fixing ~50 issues spanning ARIA labeling, keyboard navigation, color contrast, DOM element ordering, and modal rendering/focus management; achieved formal Section 508 compliance sign-off.",
         position_id: 1,
         addToResume: true
       }
