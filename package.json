@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "generate-resume": "tsx scripts/generateResumePDF.tsx",
-    "generate-resume:anthropic": "tsx scripts/generateResumePDF.tsx --data=anthropic"
+    "generate-resume": "tsx scripts/generateResumePDF.ts"
   },
   "type": "module",
   "dependencies": {

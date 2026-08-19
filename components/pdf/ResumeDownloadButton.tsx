@@ -1,5 +1,5 @@
 const RESUME_URL =
-  "https://drive.google.com/file/d/1BMS-A5KQr9SFZEOjUdNXHi87AvkMERC1/view?usp=drive_link"; // paste your Google Drive share link here
+  "https://drive.google.com/file/d/1o8rjzXbeQ3gqAuTVmjdiTmRF4yqXfML-/view?usp=sharing"; // paste your Google Drive share link here
 
 export default function ResumeDownloadButton() {
   return (
